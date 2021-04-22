@@ -7,8 +7,10 @@ NanoLogLite is a revised version of [NanoLog](https://github.com/PlatformLab/Nan
 * NanoLogLite won't create a default log file before user calling `NanoLog::setLogFile`.
 * Log msg header is improved: NanoLogLite by default sets a meaningful thread id, and also allows user to customize the thread name; Time string is shortened, and folder part is removed from the file path.
 * NanoLogLite won't create background thread internally, it requires user to poll it periodically. The idea is that user should have the ability to manage the threads in their program.  This would not make it harder to use as the user can simply create a thread himself to poll if he doesn't care.
-* Log timestamp precision is much improved, it's almost synchronized with system time.
 * Some shortcut macros are added for easier writing logging code: `logd`, `logi`, `logw`, `loge` for logging DEBUG/INFO/WARNING/ERROR msgs respectively.
+* Log timestamp precision is much improved, it's almost synchronized with system time.
+* Performance is improve a little as the Stagging buffer is re-implemented.
+
 
 ## Examples of the new features:
 ```c++
