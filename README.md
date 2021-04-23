@@ -1,5 +1,5 @@
 # NanoLogLite
-NanoLogLite is a revised version of [NanoLog](https://github.com/PlatformLab/NanoLog) which is easier to use without performance compromise.
+NanoLogLite is a revised version of [NanoLog](https://github.com/PlatformLab/NanoLog), and is easier to use without performance compromise.
 
 ## The major changes are:
 * NanoLogLite writes directly in human readable format instead of writing to a binary file and needing an additional decoder for reading, this behaves like other log libraries.
@@ -24,6 +24,8 @@ NanoLog::setThreadName("main");
 void logcb(uint64_t ns, NanoLog::LogLevel level, const char* msg, size_t msg_len) {
   printf("logcb, ns: %ld, msg: %s\n", ns, msg);
 }
+
+// we can set a minimum callback interval(in seconds) for each msg, 0 here means no such limitation
 NanoLog::setLogCB(logcb, NanoLog::WARNING, 0);
 
 // user need to poll it
