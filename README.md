@@ -36,3 +36,6 @@ NanoLog::poll();
 
 ## Test
 Check [log_test.cc](https://github.com/MengRao/NanoLogLite/blob/main/test/log_test.cc) for example usage.
+
+## How to build static library
+Simply delete `SHARED` in CMakeLists.txt.
