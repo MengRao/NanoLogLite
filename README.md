@@ -1,3 +1,5 @@
+NanoLogLite is no longer under maintenance as there's a better alternative library [fmtlog](https://github.com/MengRao/fmtlog) which is easier to use and more performant, thus I suggest user switch to the latter.
+
 # NanoLogLite
 NanoLogLite is a revised version of [NanoLog](https://github.com/PlatformLab/NanoLog), and is easier to use without performance compromise.
 
